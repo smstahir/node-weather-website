@@ -3,7 +3,7 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    fetch('http://localhost:3000/weather?search=' + search.value).then((response) => {
+    fetch('/weather?search=' + search.value).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 alert(data.error)
